@@ -3,5 +3,5 @@
 <br>
 <h3>Appointments: </h3>
   <% @appointments.each do |appointment| %>
-  <li><%= appointment.appointment_datetime %> - <%= link_to appointment.patient.name, patient_path(appointment.patient) %></li>
+  <li><%= appointment.appointment_datetime.strftime("%B %d, %Y") + " at " + appt.appointment_datetime.strftime("%R") %> - <%= link_to appointment.patient.name, patient_path(appointment.patient) %></li>
   <% end %>
